@@ -340,21 +340,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ================= EMAIL TO CLIPBOARD COPY ================= */
-  btnCopyEmail.addEventListener("click", () => {
-    const emailText = document.getElementById("email-link").textContent;
-    
-    navigator.clipboard.writeText(emailText).then(() => {
-      emailCopyFeedback.style.opacity = "1";
-      btnCopyEmail.innerHTML = '<i class="fa-solid fa-check" style="color:#10B981;"></i> Email Copied';
+  if (btnCopyEmail) {
+    btnCopyEmail.addEventListener("click", () => {
+      const emailText = document.getElementById("email-link").textContent;
       
-      setTimeout(() => {
-        emailCopyFeedback.style.opacity = "0";
-        btnCopyEmail.innerHTML = '<i class="fa-regular fa-copy"></i> Copy to Clipboard';
-      }, 2500);
-    }).catch(err => {
-      console.error("Clipboard copy failed: ", err);
+      navigator.clipboard.writeText(emailText).then(() => {
+        emailCopyFeedback.style.opacity = "1";
+        btnCopyEmail.innerHTML = '<i class="fa-solid fa-check" style="color:#10B981;"></i> Email Copied';
+        
+        setTimeout(() => {
+          emailCopyFeedback.style.opacity = "0";
+          btnCopyEmail.innerHTML = '<i class="fa-regular fa-copy"></i> Copy to Clipboard';
+        }, 2500);
+      }).catch(err => {
+        console.error("Clipboard copy failed: ", err);
+      });
     });
-  });
+  }
 
 
 
