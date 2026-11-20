@@ -469,8 +469,8 @@ nav a.active::after {
 
 .hero-image {
   width: 100%;
-  max-width: 315px;
-  aspect-ratio: 1 / 1;
+  max-width: 380px;
+  aspect-ratio: 16 / 9;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
@@ -483,7 +483,7 @@ nav a.active::after {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 25%;
   transition: var(--transition-smooth);
 }
 
@@ -497,32 +497,32 @@ nav a.active::after {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  padding: 11px 17px;
-  border-radius: 15px;
+  padding: 10px 16px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
-  gap: 9px;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 13.5px;
   box-shadow: var(--card-shadow);
   pointer-events: none;
   animation: float 6s ease-in-out infinite;
 }
 
 .badge-1 {
-  top: 8%;
-  left: -32px;
+  top: -12px;
+  left: -20px;
   animation-delay: 0s;
 }
 
 .badge-2 {
-  bottom: 12%;
-  right: -28px;
+  top: -12px;
+  right: -20px;
   animation-delay: 2s;
 }
 
 .badge-3 {
-  bottom: -12px;
-  left: 15px;
+  bottom: -15px;
+  left: 30px;
   animation-delay: 4s;
 }
 
