@@ -653,6 +653,7 @@ nav a.active::after {
   height: 380px;
   border-radius: 30px;
   object-fit: cover;
+  object-position: center 35%;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--glass-border);
   transition: var(--transition-smooth);
